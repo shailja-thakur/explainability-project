@@ -1,30 +1,31 @@
-# RISE
+# Saliency-map based explanation
 This repository contains source code necessary to reproduce some of the main results in the paper:
 
-[Vitali Petsiuk](http://cs-people.bu.edu/vpetsiuk/), [Abir Das](http://cs-people.bu.edu/dasabir/), [Kate Saenko](http://ai.bu.edu/ksaenko.html) (BMVC, 2018) <br>
-[RISE: Randomized Input Sampling for Explanation of Black-box Models](https://arxiv.org/abs/1806.07421)
+[Shailja Thakur](https://uwaterloo.ca/embedded-software-group/people-profiles/shailja-thakur), [Sebastian Fischmeister](https://uwaterloo.ca/embedded-software-group/people-profiles/sebastian-fischmeister) (ICPR, 2020) <br>
+[A generalizable saliency map based model outcome explanation](https://arxiv.org/abs/2006.09504)
 
 **If you use this software in an academic article, please consider citing:**
 
-    @inproceedings{Petsiuk2018rise,
-      title = {RISE: Randomized Input Sampling for Explanation of Black-box Models},
-      author = {Vitali Petsiuk and Abir Das and Kate Saenko},
-      booktitle = {Proceedings of the British Machine Vision Conference (BMVC)},
-      year = {2018}
+    
+    @inproceedings{thakur2020generalizable,
+      title={A generalizable saliency map-based interpretation of model outcome},
+      author={Thakur, Shailja and Fischmeister, Sebastian},
+      year={2020},
+      booktitle={Proceedings of the International Conference on Pattern Recognition (ICPR)}
     }
 
-For more information regarding the paper, please visit http://cs-people.bu.edu/vpetsiuk/rise/.
+## Problem
+The inability of a deployed model to explain its decision-making process can cause the system to do more harm than good under unusual circumstances. 
 
 ## Method overview
-To generate a saliency map for model's prediction, RISE queries black-box model on multiple randomly masked versions of input.
-After all the queries are done we average all the masks with respect to their scores to produce the final saliency map. The idea behind this is that whenever a mask preserves important parts of the image it gets higher score, and consequently has a higher weight in the sum.
-![](https://eclique.github.io/rep-imgs/RISE/rise-overview.png)
+We propose a non-intrusive explainability technique that generates a target-specific saliency map for a given input and the target prediction score. The approach relies on empirical risk minimization with a randomly initialized mask to locate the input pixels sensitive for the classification of the input to the target class. Thus, for a masked input, if the confidence of the model in the most probable class is given by p, then the optimal set of salient pixels for the input is empirically located by randomly retaining $p$\% of the unmasked pixels (with value >0) and (1-p)% of the masked pixels (with value zero) followed by weighing the pixels using the class score. Based on the evaluation of the approach on a wide range of datasets and state-of-the-art models, it was observed that the method converged faster to an estimate of the saliency-map and attained at least as good accuracy as the prior saliency-map-based approaches.
+<!-- ![](https://eclique.github.io/rep-imgs/RISE/rise-overview.png) -->
 
 ## Repository contents
-* The whole idea is implemented in [Easy_start](Easy_start.ipynb) notebook, it's done in Keras but is really easy to modify for any framework, since the method itself is model-agnostic.
-* [Saliency](Saliency.ipynb) notebook demonstrates the usage of RISE class optimized for PyTorch.
-* [Evaluation](Evaluation.ipynb) notebook displays another contribution of the paper: *Causal metrics*.
+* The whole idea is implemented in [OISE-prototype.ipynb](XYZ.ipynb) notebook, it's done in Keras, and can be easily tweaked to work using other framework as it is model-agnotic in nature.
+<!-- * [Saliency](Saliency.ipynb) notebook demonstrates the usage of RISE class optimized for PyTorch. -->
+<!-- * [Evaluation](Evaluation.ipynb) notebook displays another contribution of the paper: *Causal metrics*. -->
 
 ## Examples
-![](https://eclique.github.io/rep-imgs/RISE/example.png)
-![](https://eclique.github.io/rep-imgs/RISE/goldish.gif)
+<!-- ![](https://eclique.github.io/rep-imgs/RISE/example.png) -->
+<!-- ![](https://eclique.github.io/rep-imgs/RISE/goldish.gif) -->
