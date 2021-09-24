@@ -26,9 +26,10 @@ We propose a non-intrusive explainability technique that generates a target-spec
 <!-- * [Saliency](Saliency.ipynb) notebook demonstrates the usage of RISE class optimized for PyTorch. -->
 <!-- * [Evaluation](Evaluation.ipynb) notebook displays another contribution of the paper: *Causal metrics*. -->
 
-## Examples 
+# Examples 
 
-# Pointing game evaluation
+### Pointing game evaluation
 ![](pointing_game_result.png)
 
+### Insert/Delete Metrics
 ![](saliency_map_comparison_1_2_3.png)
