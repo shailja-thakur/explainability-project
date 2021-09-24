@@ -19,7 +19,7 @@ The inability of a deployed model to explain its decision-making process can cau
 
 ## Method overview
 We propose a non-intrusive explainability technique that generates a target-specific saliency map for a given input and the target prediction score. The approach relies on empirical risk minimization with a randomly initialized mask to locate the input pixels sensitive for the classification of the input to the target class. Thus, for a masked input, if the confidence of the model in the most probable class is given by p, then the optimal set of salient pixels for the input is empirically located by randomly retaining $p$\% of the unmasked pixels (with value >0) and (1-p)% of the masked pixels (with value zero) followed by weighing the pixels using the class score. Based on the evaluation of the approach on a wide range of datasets and state-of-the-art models, it was observed that the method converged faster to an estimate of the saliency-map and attained at least as good accuracy as the prior saliency-map-based approaches.
-<!-- ![](mask-update-block-diagram.png) -->
+![](mask-update-block-diagram.png)
 
 ## Repository contents
 * The whole idea is implemented in [explainer-prototype.ipynb](explainer-prototype.ipynb) notebook, it's done in Keras, and can be easily tweaked to work using other framework as it is model-agnotic in nature.
@@ -27,5 +27,8 @@ We propose a non-intrusive explainability technique that generates a target-spec
 <!-- * [Evaluation](Evaluation.ipynb) notebook displays another contribution of the paper: *Causal metrics*. -->
 
 ## Examples 
-<!-- ![](pointing_game_results.png) -->
+
+# Pointing game evaluation
+![](pointing_game_results.png)
+
 ![](saliency_map_comparison_1_2_3.png)
