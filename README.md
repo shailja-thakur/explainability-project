@@ -28,4 +28,4 @@ We propose a non-intrusive explainability technique that generates a target-spec
 
 ## Examples 
 <!-- ![](pointing_game_results.eps) -->
-![](saliency_map_comparison_123.eps)
+![](saliency_map_comparison_1_2_3.png)
