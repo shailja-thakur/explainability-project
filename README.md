@@ -22,7 +22,7 @@ We propose a non-intrusive explainability technique that generates a target-spec
 <!-- ![](mask-update-block-diagram.png) -->
 
 ## Repository contents
-* The whole idea is implemented in [OISE-prototype.ipynb](XYZ.ipynb) notebook, it's done in Keras, and can be easily tweaked to work using other framework as it is model-agnotic in nature.
+* The whole idea is implemented in [explainer-prototype.ipynb](explainer-prototype.ipynb) notebook, it's done in Keras, and can be easily tweaked to work using other framework as it is model-agnotic in nature.
 <!-- * [Saliency](Saliency.ipynb) notebook demonstrates the usage of RISE class optimized for PyTorch. -->
 <!-- * [Evaluation](Evaluation.ipynb) notebook displays another contribution of the paper: *Causal metrics*. -->
 
