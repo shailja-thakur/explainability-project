@@ -29,6 +29,6 @@ We propose a non-intrusive explainability technique that generates a target-spec
 ## Examples 
 
 # Pointing game evaluation
-![](pointing_game_results.png)
+![](pointing_game_result.png)
 
 ![](saliency_map_comparison_1_2_3.png)
